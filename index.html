@@ -43,7 +43,7 @@
     .nav-order { background: var(--spice); color: #fff !important; padding: 0.5rem 1.15rem; border-radius: 999px; font-weight: 600; }
     .nav-order:hover { background: var(--spice-deep); }
     @media (max-width: 720px) {
-      .nav-links a:not(.nav-order):not(.nav-menu) { display: none; }
+      .nav-links > a:not(.nav-order):not(.nav-menu) { display: none; }
       .nav-links { gap: 0.8rem; }
       .nav-menu { font-weight: 600; color: var(--spice) !important; }
     }
@@ -219,13 +219,11 @@
       nav { padding: 0.75rem 1rem; }
       .hero { padding: 3.5rem 1rem 3rem; }
       .hero .lede { font-size: 1rem; }
-      .btn { padding: 0.85rem 1.3rem; font-size: 0.95rem; }
       section { padding: 3rem 1rem; }
-      .wrap { padding: 0; }
       .mcat-items { grid-template-columns: 1fr; }
-      .menu-sec .wrap { text-align: left !important; }
-      .sec-sub { text-align: left; }
-      .eyebrow.center, .sec-title.center { text-align: left; }
+      .order-row { flex-direction: column; align-items: stretch; }
+      .order-row .btn { justify-content: center; width: 100%; }
+      .nav-dropdown-menu { right: -0.5rem; min-width: 160px; }
     }
   </style>
 </head>
