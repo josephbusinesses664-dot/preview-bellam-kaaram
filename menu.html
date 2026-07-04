@@ -29,7 +29,14 @@
     .nav-links a:hover, .nav-links a.active { color: var(--spice); }
     .nav-order { background: var(--spice); color: #fff !important; padding: 0.5rem 1.15rem; border-radius: 999px; font-weight: 600; }
     .nav-order:hover { background: var(--spice-deep); }
-    @media (max-width: 720px) { .nav-links a:not(.nav-order) { display: none; } }
+    @media (max-width: 720px) { .nav-links a:not(.nav-order):not(.nav-menu) { display: none; } .nav-menu { font-weight:600;color:var(--spice)!important; } }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-btn { border: none; cursor: pointer; font-family: inherit; font-size: inherit; }
+    .nav-dropdown-menu { display: none; flex-direction: column; position: absolute; right: 0; top: calc(100% + 10px); background: #fff; border-radius: 14px; box-shadow: 0 12px 32px -8px rgba(42,22,8,0.18); min-width: 180px; overflow: hidden; z-index: 200; border: 1px solid var(--cream-2); }
+    .nav-dropdown.open .nav-dropdown-menu { display: flex; }
+    .nav-dropdown-menu a { display: flex; align-items: center; gap: 0.7rem; padding: 0.85rem 1.2rem; text-decoration: none; color: var(--ink); font-weight: 600; font-size: 0.93rem; transition: background 0.15s; }
+    .nav-dropdown-menu a:hover { background: var(--cream); }
+    .nav-dropdown-menu a:first-child { border-bottom: 1px solid var(--cream-2); }
 
     /* PAGE HEADER */
     .page-header { background: linear-gradient(140deg, #FFF3DC 0%, #FBE2BA 100%); padding: 3.5rem 2rem 3rem; text-align: center; border-bottom: 1px solid var(--cream-2); }
@@ -94,7 +101,19 @@
     <a href="index.html">Home</a>
     <a href="menu.html" class="active">Menu</a>
     <a href="index.html#visit">Visit</a>
-    <a class="nav-order" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener">Order Now</a>
+    <div class="nav-dropdown">
+      <button class="nav-order nav-dropdown-btn" aria-expanded="false">Order Now ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          Zomato
+        </a>
+        <a href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FC8019" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>
+          Swiggy
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -313,5 +332,21 @@
   <p class="foot-copy">&copy; 2026 Bellam &amp; Kaaram &middot; Yapral, Secunderabad, Hyderabad, Telangana</p>
 </footer>
 
+<script>
+  (function() {
+    var btn = document.querySelector('.nav-dropdown-btn');
+    var dd = btn && btn.closest('.nav-dropdown');
+    if (!btn) return;
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var open = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', function() {
+      dd.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  })();
+</script>
 </body>
 </html>
