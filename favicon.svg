@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" role="img" aria-label="Bellam &amp; Kaaram">
+  <circle cx="22" cy="22" r="22" fill="#992A17"/>
+  <path d="M22 11c3 3.5 3 6.5 0 10-3-3.5-3-6.5 0-10z" fill="#E8A22B"/>
+  <path d="M14 20c4 0 6 2 8 6-4.5 0.5-7-1-8-6z" fill="#FFF7EA"/>
+  <path d="M30 20c-4 0-6 2-8 6 4.5 0.5 7-1 8-6z" fill="#FFF7EA"/>
+  <circle cx="22" cy="28" r="2.4" fill="#E8A22B"/>
+</svg>
