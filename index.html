@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bellam &amp; Kaaram — Sweet &amp; Spicy Cloud Kitchen | Old Safilguda, Secunderabad</title>
   <meta name="description" content="Bellam &amp; Kaaram — a delivery-only cloud kitchen in Old Safilguda, Secunderabad serving authentic sweet &amp; spicy Telugu home food. Order now on Zomato or Swiggy.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
   <style>
     :root {
       --gold: #E8A22B;
-      --gold-deep: #C97A18;
-      --spice: #B5321C;
+      --gold-deep: #925911;
+      --spice: #992A17;
       --spice-deep: #8A1F0E;
       --cream: #FFF7EA;
       --cream-2: #FBEBCF;
       --ink: #2A1608;
-      --ink-soft: #6B5335;
+      --ink-soft: #654E32;
       --white: #ffffff;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,11 +32,11 @@
       display: flex; align-items: center; justify-content: space-between;
       position: sticky; top: 0; z-index: 50;
     }
-    .nav-brand { display: flex; align-items: center; gap: 0.65rem; font-weight: 800; font-size: 1.15rem; color: var(--spice); letter-spacing: -0.01em; }
+    .nav-brand { display: flex; align-items: center; gap: 0.65rem; font-weight: 800; font-size: 1.25rem; color: var(--spice); letter-spacing: -0.01em; }
     .nav-brand .dot { color: var(--gold); }
     .nav-logo { width: 34px; height: 34px; flex: none; }
     .nav-links { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links a { color: var(--ink-soft); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a { color: var(--ink-soft); text-decoration: none; font-weight: 500; font-size: 1.0rem; transition: color 0.2s; }
     .nav-links a:hover { color: var(--spice); }
     .nav-order { background: var(--spice); color: #fff !important; padding: 0.5rem 1.15rem; border-radius: 999px; font-weight: 600; }
     .nav-order:hover { background: var(--spice-deep); }
@@ -52,7 +50,7 @@
     .hero {
       position: relative;
       background: radial-gradient(circle at 20% 20%, rgba(232,162,43,0.28), transparent 55%),
-                  radial-gradient(circle at 85% 75%, rgba(181,50,28,0.30), transparent 55%),
+                  radial-gradient(circle at 85% 75%, rgba(153,42,23,0.18), transparent 55%),
                   linear-gradient(140deg, #FFF3DC 0%, #FBE2BA 100%);
       padding: 5.5rem 2rem 5rem;
       text-align: center;
@@ -60,29 +58,29 @@
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(181,50,28,0.10); color: var(--spice);
-      border: 1px solid rgba(181,50,28,0.25);
+      background: rgba(153,42,23,0.10); color: var(--spice);
+      border: 1px solid rgba(153,42,23,0.25);
       padding: 0.4rem 1rem; border-radius: 999px;
-      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em;
       margin-bottom: 1.5rem;
     }
     .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.05; color: var(--ink); margin-bottom: 1.1rem; }
     .hero h1 .sweet { color: var(--gold-deep); }
     .hero h1 .spicy { color: var(--spice); }
-    .hero .telugu { font-size: 1.05rem; color: var(--ink-soft); font-weight: 500; margin-bottom: 0.4rem; letter-spacing: 0.04em; }
-    .hero .lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 620px; margin: 0 auto 2.2rem; }
+    .hero .telugu { font-size: 1.25rem; line-height: 1.5; color: var(--ink-soft); font-weight: 500; margin-bottom: 0.4rem; letter-spacing: 0.04em; }
+    .hero .lede { font-size: 1.25rem; line-height: 1.55; color: var(--ink-soft); max-width: 620px; margin: 0 auto 2.2rem; }
     .order-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
     .btn {
       display: inline-flex; align-items: center; gap: 0.6rem;
       padding: 0.95rem 1.8rem; border-radius: 12px;
-      font-weight: 700; font-size: 1.02rem; text-decoration: none;
+      font-weight: 700; font-size: 1.0rem; text-decoration: none;
       transition: transform 0.18s ease, box-shadow 0.18s ease;
     }
     .btn svg { width: 20px; height: 20px; }
-    .btn-zomato { background: #E23744; color: #fff; box-shadow: 0 10px 24px -10px rgba(226,55,68,0.7); }
-    .btn-swiggy { background: #FC8019; color: #fff; box-shadow: 0 10px 24px -10px rgba(252,128,25,0.7); }
+    .btn-zomato { background: #DD3542; color: #fff; box-shadow: 0 10px 24px -10px rgba(42,22,8,0.45); }
+    .btn-swiggy { background: #FC8019; color: var(--ink); box-shadow: 0 10px 24px -10px rgba(42,22,8,0.45); }
     .btn:hover { transform: translateY(-3px); }
-    .hero-meta { margin-top: 2.4rem; display: flex; flex-wrap: wrap; gap: 1.6rem 2.4rem; justify-content: center; color: var(--ink-soft); font-size: 0.95rem; font-weight: 500; }
+    .hero-meta { margin-top: 2.4rem; display: flex; flex-wrap: wrap; gap: 1.6rem 2.4rem; justify-content: center; color: var(--ink-soft); font-size: 1.0rem; font-weight: 500; }
     .hero-meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
     .hero-meta svg { width: 18px; height: 18px; color: var(--gold-deep); }
     .stars { color: var(--gold); }
@@ -90,10 +88,10 @@
     /* SECTION SHELL */
     section { padding: 5rem 2rem; }
     .wrap { max-width: 1040px; margin: 0 auto; }
-    .eyebrow { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; font-weight: 700; color: var(--gold-deep); margin-bottom: 0.7rem; }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; font-weight: 700; color: var(--gold-deep); margin-bottom: 0.7rem; }
     .sec-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--ink); line-height: 1.15; margin-bottom: 1rem; }
     .sec-title.center, .eyebrow.center { text-align: center; }
-    .sec-sub { color: var(--ink-soft); max-width: 620px; margin: 0 auto 3rem; text-align: center; font-size: 1.05rem; }
+    .sec-sub { color: var(--ink-soft); max-width: 620px; margin: 0 auto 3rem; text-align: center; font-size: 1.25rem; line-height: 1.55; }
 
     /* CONCEPT / SWEET & SPICY */
     .concept { background: var(--white); }
@@ -102,13 +100,13 @@
     .duo-card { border-radius: 18px; padding: 2.2rem; position: relative; overflow: hidden; }
     .duo-card .icn { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; }
     .duo-card .icn svg { width: 28px; height: 28px; color: #fff; }
-    .duo-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.15rem; }
-    .duo-card .word { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.9rem; }
-    .duo-card p { color: var(--ink-soft); font-size: 0.98rem; }
+    .duo-card h3 { font-size: 1.75rem; line-height: 1.35; font-weight: 800; margin-bottom: 0.15rem; }
+    .duo-card .word { font-size: 1.0rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.9rem; }
+    .duo-card p { color: var(--ink-soft); font-size: 1.0rem; }
     .sweet-card { background: linear-gradient(160deg, #FFF6E4, #FCE9C4); }
     .sweet-card .icn { background: linear-gradient(140deg, var(--gold), var(--gold-deep)); }
     .sweet-card h3, .sweet-card .word { color: var(--gold-deep); }
-    .spicy-card { background: linear-gradient(160deg, #FDEBE6, #F8D3C9); }
+    .spicy-card { background: linear-gradient(160deg, #FDEBE6, #FBE0D8); }
     .spicy-card .icn { background: linear-gradient(140deg, var(--spice), var(--spice-deep)); }
     .spicy-card h3, .spicy-card .word { color: var(--spice); }
 
@@ -126,8 +124,8 @@
     .feat { text-align: center; padding: 1.8rem 1.2rem; border-radius: 16px; background: var(--cream); border: 1px solid var(--cream-2); }
     .feat .icn { width: 52px; height: 52px; margin: 0 auto 1rem; border-radius: 50%; background: rgba(232,162,43,0.15); display: flex; align-items: center; justify-content: center; }
     .feat .icn svg { width: 26px; height: 26px; color: var(--gold-deep); }
-    .feat h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
-    .feat p { font-size: 0.9rem; color: var(--ink-soft); }
+    .feat h3 { font-size: 1.25rem; line-height: 1.4; font-weight: 700; margin-bottom: 0.35rem; }
+    .feat p { font-size: 1.0rem; color: var(--ink-soft); }
 
     /* FULL MENU */
     .menu-sec { background: var(--cream); }
@@ -136,18 +134,18 @@
     .mcard:hover { box-shadow: 0 18px 40px -14px rgba(138,31,14,0.18); transform: translateY(-4px); }
     .mcard-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
     .mcard-body { padding: 1.1rem 1.3rem 1.4rem; }
-    .vtag { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.18rem 0.55rem; border-radius: 20px; margin-bottom: 0.45rem; }
-    .vtag.nv { background: rgba(181,50,28,0.1); color: var(--spice); }
+    .vtag { display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.18rem 0.55rem; border-radius: 20px; margin-bottom: 0.45rem; }
+    .vtag.nv { background: rgba(153,42,23,0.1); color: var(--spice); }
     .vtag.vg { background: rgba(40,130,60,0.1); color: #257a30; }
     .vtag.mb { background: rgba(232,162,43,0.15); color: var(--gold-deep); }
-    .mcard h4 { font-size: 1.03rem; font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; }
-    .mcard p { font-size: 0.87rem; color: var(--ink-soft); line-height: 1.55; }
+    .mcard h3 { font-size: 1.0rem; font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; }
+    .mcard p { font-size: 1.0rem; color: var(--ink-soft); line-height: 1.55; }
     /* text menu categories */
     .menu-cats { margin-top: 3rem; }
     .mcat { margin-bottom: 2.4rem; }
     .mcat-head { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--cream-2); }
-    .mcat-head h3 { font-size: 1.1rem; font-weight: 800; color: var(--ink); }
-    .mcat-head .mcat-count { font-size: 0.75rem; font-weight: 600; color: var(--ink-soft); background: var(--cream-2); padding: 0.15rem 0.55rem; border-radius: 999px; }
+    .mcat-head h3 { font-size: 1.25rem; font-weight: 800; color: var(--ink); }
+    .mcat-head .mcat-count { font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); background: var(--cream-2); padding: 0.15rem 0.55rem; border-radius: 999px; }
     .mcat-items { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.8rem; }
     @media (max-width: 700px) { .mcat-items { grid-template-columns: 1fr; } }
     .mitem { display: flex; gap: 0.55rem; align-items: flex-start; padding: 0.55rem 0; border-bottom: 1px solid rgba(251,235,207,0.7); }
@@ -156,7 +154,7 @@
     .mdot.nv { border-color: var(--spice); background: var(--spice); }
     .mdot.vg { border-color: #257a30; background: #257a30; }
     .mitem-text { flex: 1; }
-    .mitem-name { font-size: 0.92rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .mitem-name { font-size: 1.0rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
     .mitem-desc { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.45; margin-top: 0.1rem; }
     .menu-cta-row { text-align: center; margin-top: 3rem; }
     .btn-ghost { background: #fff; color: var(--spice); border: 2px solid var(--spice); }
@@ -169,23 +167,23 @@
     .info-card { background: #fff; border-radius: 18px; padding: 2rem; border: 1px solid var(--cream-2); }
     .info-row { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--cream-2); }
     .info-row:last-child { border-bottom: none; }
-    .info-row .icn { width: 42px; height: 42px; flex: none; border-radius: 11px; background: rgba(181,50,28,0.10); display: flex; align-items: center; justify-content: center; }
+    .info-row .icn { width: 42px; height: 42px; flex: none; border-radius: 11px; background: rgba(153,42,23,0.10); display: flex; align-items: center; justify-content: center; }
     .info-row .icn svg { width: 21px; height: 21px; color: var(--spice); }
-    .info-row h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 600; margin-bottom: 0.15rem; }
-    .info-row p { font-weight: 500; color: var(--ink); font-size: 0.98rem; }
+    .info-row h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); font-weight: 600; margin-bottom: 0.15rem; }
+    .info-row p { font-weight: 500; color: var(--ink); font-size: 1.0rem; }
     .hours-list { list-style: none; }
-    .hours-list li { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--cream-2); font-size: 0.98rem; }
+    .hours-list li { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--cream-2); font-size: 1.0rem; }
     .hours-list li:last-child { border-bottom: none; }
     .hours-list .day { font-weight: 500; }
     .hours-list .time { color: var(--ink-soft); }
 
     /* FOOTER */
     footer { background: var(--ink); color: #C9B79A; text-align: center; padding: 3rem 2rem 2.2rem; }
-    .foot-brand { display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.3rem; color: #fff; margin-bottom: 1rem; }
+    .foot-brand { display: inline-flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.75rem; color: #fff; margin-bottom: 1rem; }
     .foot-brand .dot { color: var(--gold); }
     .foot-order { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; margin: 1.4rem 0 1.8rem; }
-    .foot-order a { padding: 0.7rem 1.5rem; border-radius: 10px; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
-    .foot-line { font-size: 0.85rem; opacity: 0.7; max-width: 560px; margin: 0 auto 0.6rem; }
+    .foot-order a { box-shadow: none; padding: 0.7rem 1.5rem; border-radius: 10px; font-weight: 600; text-decoration: none; font-size: 1.0rem; }
+    .foot-line { font-size: 1.0rem; opacity: 0.7; max-width: 560px; margin: 0 auto 0.6rem; }
     .foot-copy { font-size: 0.8rem; opacity: 0.55; margin-top: 1.2rem; }
 
     /* ORDER DROPDOWN */
@@ -195,7 +193,7 @@
       display: none; flex-direction: column;
       position: absolute; right: 0; top: calc(100% + 10px);
       background: #fff; border-radius: 14px;
-      box-shadow: 0 12px 32px -8px rgba(42,22,8,0.18);
+      box-shadow: 0 6px 14px -6px rgba(42,22,8,0.22);
       min-width: 180px; overflow: hidden; z-index: 200;
       border: 1px solid var(--cream-2);
     }
@@ -203,7 +201,7 @@
     .nav-dropdown-menu a {
       display: flex; align-items: center; gap: 0.7rem;
       padding: 0.85rem 1.2rem; text-decoration: none;
-      color: var(--ink); font-weight: 600; font-size: 0.93rem;
+      color: var(--ink); font-weight: 600; font-size: 1.0rem;
       transition: background 0.15s;
     }
     .nav-dropdown-menu a:hover { background: var(--cream); }
@@ -220,8 +218,8 @@
       .nav-brand-text { display: none; }
       .nav-logo { width: 32px; height: 32px; }
       .nav-links { gap: 0.6rem; }
-      .nav-menu { font-size: 0.9rem; }
-      .nav-order { padding: 0.45rem 0.85rem; font-size: 0.88rem; }
+      .nav-menu { font-size: 1.0rem; }
+      .nav-order { padding: 0.45rem 0.85rem; font-size: 1.0rem; }
       .hero { padding: 3.5rem 1rem 3rem; }
       .hero .lede { font-size: 1rem; }
       section { padding: 3rem 1rem; }
@@ -233,14 +231,14 @@
   </style>
 
 <!-- SEO -->
-<link rel="canonical" href="https://preview-bellam-kaaram.onrender.com/">
-<meta property="og:title" content="Bellam & Kaaram — Sweet & Spicy Telugu Cloud Kitchen, Secunderabad">
-<meta property="og:description" content="Bellam & Kaaram — delivery-only cloud kitchen serving authentic sweet & spicy Telugu home food across Old Safilguda & Secunderabad, Hyderabad. Order on Zomato or Swiggy.">
+<link rel="canonical" href="https://bellamkaram.online/">
+<meta property="og:title" content="Bellam &amp; Kaaram — Sweet &amp; Spicy Telugu Cloud Kitchen, Secunderabad">
+<meta property="og:description" content="Bellam &amp; Kaaram — delivery-only cloud kitchen serving authentic sweet &amp; spicy Telugu home food across Old Safilguda &amp; Secunderabad, Hyderabad. Order on Zomato or Swiggy.">
 <meta property="og:type" content="restaurant.restaurant">
-<meta property="og:url" content="https://preview-bellam-kaaram.onrender.com/">
+<meta property="og:url" content="https://bellamkaram.online/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bellam & Kaaram — Sweet & Spicy Telugu Cloud Kitchen, Secunderabad">
-<meta name="twitter:description" content="Bellam & Kaaram — delivery-only cloud kitchen serving authentic sweet & spicy Telugu home food across Old Safilguda & Secunderabad, Hyderabad. Order on Zomato or Swiggy.">
+<meta name="twitter:title" content="Bellam &amp; Kaaram — Sweet &amp; Spicy Telugu Cloud Kitchen, Secunderabad">
+<meta name="twitter:description" content="Bellam &amp; Kaaram — delivery-only cloud kitchen serving authentic sweet &amp; spicy Telugu home food across Old Safilguda &amp; Secunderabad, Hyderabad. Order on Zomato or Swiggy.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -254,8 +252,8 @@
     "Home Food"
   ],
   "priceRange": "₹₹",
-  "url": "https://preview-bellam-kaaram.onrender.com/",
-  "hasMenu": "https://preview-bellam-kaaram.onrender.com/menu.html",
+  "url": "https://bellamkaram.online/",
+  "hasMenu": "https://bellamkaram.online/menu.html",
   "acceptsReservations": false,
   "address": {
     "@type": "PostalAddress",
@@ -319,7 +317,7 @@
 </script>
 <!-- End Meta Pixel -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-03WND9ZQL7"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-03WND9ZQL7"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -334,11 +332,11 @@ gtag('config', 'G-03WND9ZQL7');
 <nav>
   <a class="nav-brand" href="index.html" style="text-decoration:none;">
     <svg class="nav-logo" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="22" cy="22" r="21" fill="#B5321C"/>
-      <path d="M22 11c3 3.5 3 6.5 0 10-3-3.5-3-6.5 0-10z" fill="#E8A22B"/>
-      <path d="M14 20c4 0 6 2 8 6-4.5 0.5-7-1-8-6z" fill="#FFF7EA"/>
-      <path d="M30 20c-4 0-6 2-8 6 4.5 0.5 7-1 8-6z" fill="#FFF7EA"/>
-      <circle cx="22" cy="28" r="2.4" fill="#E8A22B"/>
+      <circle cx="22" cy="22" r="21" fill="#992A17"></circle>
+      <path d="M22 11c3 3.5 3 6.5 0 10-3-3.5-3-6.5 0-10z" fill="#E8A22B"></path>
+      <path d="M14 20c4 0 6 2 8 6-4.5 0.5-7-1-8-6z" fill="#FFF7EA"></path>
+      <path d="M30 20c-4 0-6 2-8 6 4.5 0.5 7-1 8-6z" fill="#FFF7EA"></path>
+      <circle cx="22" cy="28" r="2.4" fill="#E8A22B"></circle>
     </svg>
     <span class="nav-brand-text">Bellam <span class="dot">&amp;</span> Kaaram</span>
   </a>
@@ -350,11 +348,11 @@ gtag('config', 'G-03WND9ZQL7');
       <button class="nav-order nav-dropdown-btn" aria-expanded="false">Order Now ▾</button>
       <div class="nav-dropdown-menu">
         <a href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
           Zomato
         </a>
         <a href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FC8019" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FC8019" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path><path d="M9 11V9a3 3 0 0 1 6 0v2"></path></svg>
           Swiggy
         </a>
       </div>
@@ -364,49 +362,49 @@ gtag('config', 'G-03WND9ZQL7');
 
 <header class="hero">
   <div class="hero-badge">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    Delivery-Only Cloud Kitchen &middot; Old Safilguda, Secunderabad
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+    Delivery-Only Cloud Kitchen · Old Safilguda, Secunderabad
   </div>
   <p class="telugu">బెల్లం &amp; కారం</p>
   <h1><span class="sweet">Sweet</span> meets <span class="spicy">Spicy</span></h1>
-  <p class="lede">Authentic Telugu home-style cooking delivered hot to your door. Bellam means jaggery-sweet, Kaaram means fiery-spicy &mdash; every meal is a balance of both.</p>
+  <p class="lede">Authentic Telugu home-style cooking delivered hot to your door. Bellam means jaggery-sweet and Kaaram means fiery-spicy. Every meal is a balance of both.</p>
   <div class="order-row">
     <a class="btn btn-zomato" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
       Order on Zomato
     </a>
     <a class="btn btn-swiggy" href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path><path d="M9 11V9a3 3 0 0 1 6 0v2"></path></svg>
       Order on Swiggy
     </a>
   </div>
   <div class="hero-meta">
-    <span><span class="stars">&#9733;</span> 3.6 rating &middot; 23 reviews</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Lunch &amp; Dinner</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg> &#8377;250 for one</span>
+    <span><span class="stars">★</span> 3.6 rating · 23 reviews</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg> Lunch &amp; Dinner</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg> ₹250 for one</span>
   </div>
 </header>
 
 <!-- STORY / SWEET & SPICY -->
 <section class="concept" id="story">
   <div class="wrap">
-    <p class="eyebrow center" data-anim>The Meaning Behind the Name</p>
-    <h2 class="sec-title center" data-anim data-delay="1">Two Flavours, One Kitchen</h2>
-    <p class="sec-sub" data-anim data-delay="2">In Telugu, the finest meals live in the balance of sweetness and heat. Our kitchen is built on that idea &mdash; comfort and fire, side by side on every plate.</p>
+    <p class="eyebrow center" data-anim="">The Meaning Behind the Name</p>
+    <h2 class="sec-title center" data-anim="" data-delay="1">Two Flavours, One Kitchen</h2>
+    <p class="sec-sub" data-anim="" data-delay="2">In Telugu, the finest meals live in the balance of sweetness and heat. Our kitchen is built on that idea: comfort and fire, side by side on every plate.</p>
     <div class="duo">
-      <div class="duo-card sweet-card" data-anim data-delay="1">
+      <div class="duo-card sweet-card" data-anim="" data-delay="1">
         <div class="icn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 2 8h10c0-3 2-5 2-8a7 7 0 0 0-7-7z"/><path d="M9 22h6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 2 8h10c0-3 2-5 2-8a7 7 0 0 0-7-7z"></path><path d="M9 22h6"></path></svg>
         </div>
-        <p class="word">Bellam &middot; &#3145;&#3142;&#3122;&#3149;&#3122;&#3074;</p>
+        <p class="word">Bellam · ౉ెల్లం</p>
         <h3 class="serif">Sweet</h3>
-        <p>Jaggery, ghee and warmth &mdash; the traditional sweetness that rounds off a hearty Telugu meal and feels just like home.</p>
+        <p>Jaggery, ghee and warmth: the traditional sweetness that rounds off a hearty Telugu meal, and it feels just like home.</p>
       </div>
-      <div class="duo-card spicy-card" data-anim data-delay="2">
+      <div class="duo-card spicy-card" data-anim="" data-delay="2">
         <div class="icn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-1 3-1 5 1 7 3 3 4 7 1 10-4 4-9 1-9-4 0-3 2-5 4-7 1.5-1.5 2.5-3.5 2-6z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-1 3-1 5 1 7 3 3 4 7 1 10-4 4-9 1-9-4 0-3 2-5 4-7 1.5-1.5 2.5-3.5 2-6z"></path></svg>
         </div>
-        <p class="word">Kaaram &middot; &#3093;&#3134;&#3120;&#3074;</p>
+        <p class="word">Kaaram · కారం</p>
         <h3 class="serif">Spicy</h3>
         <p>Bold red chilli, roasted spices and that unmistakable Andhra-Telangana heat that makes every bite come alive.</p>
       </div>
@@ -418,27 +416,27 @@ gtag('config', 'G-03WND9ZQL7');
 <!-- FEATURES -->
 <section class="features">
   <div class="wrap">
-    <p class="eyebrow center" data-anim>Why Order From Us</p>
-    <h2 class="sec-title center" data-anim data-delay="1">Home Food, Delivered Right</h2>
+    <p class="eyebrow center" data-anim="">Why Order From Us</p>
+    <h2 class="sec-title center" data-anim="" data-delay="1">Home Food, Delivered Right</h2>
     <div class="feat-grid" style="margin-top:2.5rem;">
-      <div class="feat" data-anim data-delay="1">
-        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <h4>Delivery Only</h4>
-        <p>A dedicated cloud kitchen focused purely on cooking and delivering &mdash; no waiting, no dine-in fuss.</p>
+      <div class="feat" data-anim="" data-delay="1">
+        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"></rect><path d="M16 8h4l3 3v5h-7z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+        <h3>Delivery Only</h3>
+        <p>A dedicated cloud kitchen focused purely on cooking and delivering. No waiting, no dine-in fuss.</p>
       </div>
-      <div class="feat" data-anim data-delay="2">
-        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 2 8h10c0-3 2-5 2-8a7 7 0 0 0-7-7z"/><path d="M9 22h6"/></svg></div>
-        <h4>Authentic Telugu</h4>
-        <p>Recipes rooted in Telangana &amp; Andhra kitchens &mdash; the real balance of bellam and kaaram.</p>
+      <div class="feat" data-anim="" data-delay="2">
+        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 3 2 5 2 8h10c0-3 2-5 2-8a7 7 0 0 0-7-7z"></path><path d="M9 22h6"></path></svg></div>
+        <h3>Authentic Telugu</h3>
+        <p>Recipes rooted in Telangana &amp; Andhra kitchens, the real balance of bellam and kaaram.</p>
       </div>
-      <div class="feat" data-anim data-delay="3">
-        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <h4>Value For Money</h4>
-        <p>Generous, satisfying meals at around &#8377;250 for one &mdash; everyday comfort food that fits the budget.</p>
+      <div class="feat" data-anim="" data-delay="3">
+        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div>
+        <h3>Value For Money</h3>
+        <p>Generous, satisfying meals at around ₹250 for one. Everyday comfort food that fits the budget.</p>
       </div>
-      <div class="feat" data-anim data-delay="4">
-        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <h4>Lunch &amp; Dinner</h4>
+      <div class="feat" data-anim="" data-delay="4">
+        <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
+        <h3>Lunch &amp; Dinner</h3>
         <p>Open for both midday and evening cravings, so a warm plate is only a few taps away.</p>
       </div>
     </div>
@@ -448,18 +446,18 @@ gtag('config', 'G-03WND9ZQL7');
 <!-- MENU CTA (links to menu.html) -->
 <section class="menu-sec" id="menu">
   <div class="wrap" style="text-align:center;">
-    <p class="eyebrow center" data-anim>What We Serve</p>
-    <h2 class="sec-title center" data-anim data-delay="1">Our Menu</h2>
-    <p class="sec-sub" data-anim data-delay="2">From fiery Andhra appetisers to comforting rice plates, biryani, combos and sweets &mdash; every dish made fresh in our Old Safilguda cloud kitchen.</p>
-    <div data-anim data-delay="3" style="margin-top:2rem;">
-      <a class="btn" href="menu.html" style="background:var(--spice);color:#fff;box-shadow:0 10px 24px -10px rgba(181,50,28,0.6);font-size:1.05rem;padding:1rem 2.2rem;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <p class="eyebrow center" data-anim="">What We Serve</p>
+    <h2 class="sec-title center" data-anim="" data-delay="1">Our Menu</h2>
+    <p class="sec-sub" data-anim="" data-delay="2">From fiery Andhra appetisers to comforting rice plates, biryani, combos and sweets, every dish made fresh in our Old Safilguda cloud kitchen.</p>
+    <div data-anim="" data-delay="3" style="margin-top:2rem;">
+      <a class="btn" href="menu.html" style="background:var(--spice);color:#fff;box-shadow:0 10px 24px -10px rgba(153,42,23,0.6);font-size: 1.25rem;padding:1rem 2.2rem;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
         View Full Menu
       </a>
     </div>
     <div class="menu-cats" style="display:none;">
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Meals</h3><span class="mcat-count">2</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Sambar Rice</div><div class="mitem-desc">Hearty South Indian rice cooked with spiced sambar and tender chicken.</div></div></div>
@@ -467,21 +465,21 @@ gtag('config', 'G-03WND9ZQL7');
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Millet &amp; Snacks</h3><span class="mcat-count">2</span></div>
         <div class="mcat-items">
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Ragi Sangati</div><div class="mitem-desc">Wholesome, nutritious finger-millet mudde &mdash; a traditional Telangana staple.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Ragi Sangati</div><div class="mitem-desc">Wholesome, nutritious finger-millet mudde, a traditional Telangana staple.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">French Fries</div><div class="mitem-desc">Golden, crispy deep-fried potato strips.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Non-veg Appetizers</h3><span class="mcat-count">22</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bheemavaram Mutton Vepudu</div><div class="mitem-desc">Authentic Andhra-style dry mutton fry with bold spices.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bhimavaram Royyala Vepudu</div><div class="mitem-desc">Signature coastal Andhra spicy prawn stir-fry.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Butter Garlic Prawns</div><div class="mitem-desc">Succulent prawns tossed in rich butter and garlic.</div></div></div>
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Ghee Roast</div><div class="mitem-desc">Popular Tuluva Mangalorean chicken recipe &mdash; fiery red, tangy and aromatic.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Ghee Roast</div><div class="mitem-desc">Popular Tuluva Mangalorean chicken recipe, fiery red, tangy and aromatic.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Drumsticks</div><div class="mitem-desc">Tender and flavorful chicken drumsticks, perfect for a delicious meal.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Pakoda (8 pcs)</div><div class="mitem-desc">Popular crispy and savory deep-fried Indian snack.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chilli Pepper Prawns</div><div class="mitem-desc">Spicy, flavorful prawns tossed with chilli and pepper.</div></div></div>
@@ -492,33 +490,33 @@ gtag('config', 'G-03WND9ZQL7');
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Miriyala Mamsam Vepudu</div><div class="mitem-desc">Fiery Andhra dry mutton fry with black pepper and spices.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Pepper Fry</div><div class="mitem-desc">Spicy South Indian dry dish with marinated mutton pieces.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Sukka</div><div class="mitem-desc">Highly aromatic, spicy and tangy dry curry from the Mangalore/Kundapura tradition.</div></div></div>
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Gongura Fry</div><div class="mitem-desc">Authentic fiery and tangy dish with gongura leaves &mdash; a Telangana classic.</div></div></div>
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Pachi Mirchi Kodi Vepudu</div><div class="mitem-desc">Spicy Andhra green chilli chicken fry &mdash; bold and fragrant.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Gongura Fry</div><div class="mitem-desc">Authentic fiery and tangy dish with gongura leaves, a Telangana classic.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Pachi Mirchi Kodi Vepudu</div><div class="mitem-desc">Spicy Andhra green chilli chicken fry — bold and fragrant.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Prawn Ghee Roast</div><div class="mitem-desc">Fiery, aromatic Mangalorean coastal prawn delicacy.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Spicy Prawn Fry</div><div class="mitem-desc">Aromatic prawn fry rich in traditional flavors.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Veg Appetizers</h3><span class="mcat-count">12</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Chilli Paneer</div><div class="mitem-desc">Spicy and tangy paneer tossed with crunchy bell peppers and onions.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Crispy Corn</div><div class="mitem-desc">Golden, crunchy corn tossed with flavorful spices.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Egg Bhurji</div><div class="mitem-desc">Flavorful Indian scrambled egg with onions, tomatoes and spices.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Masala Omelette</div><div class="mitem-desc">Fluffy omelette spiced with aromatic masala and fresh herbs.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Onion Pakoda (10 pcs)</div><div class="mitem-desc">Crispy onion bhaji &mdash; the beloved Indian tea-time snack.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Onion Pakoda (10 pcs)</div><div class="mitem-desc">Crispy onion bhaji — the beloved Indian tea-time snack.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Paneer Ghee Roast</div><div class="mitem-desc">Fiery red, tangy Mangalorean-style paneer with crispy edges.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Vankaya Vepudu</div><div class="mitem-desc">Andhra-style fried eggplant &mdash; crispy, spiced and deeply satisfying.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Vankaya Vepudu</div><div class="mitem-desc">Andhra-style fried eggplant, crispy, spiced and deeply satisfying.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Sauteed Mushroom</div><div class="mitem-desc">Lightly sauteed mushrooms with Indian spices.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Main Course</h3><span class="mcat-count">8</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Butter Chicken</div><div class="mitem-desc">World-famous North Indian delicacy with tender tandoori chicken in creamy tomato gravy.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Kadai Chicken</div><div class="mitem-desc">Robust spicy North Indian curry stir-fried with peppers and spices.</div></div></div>
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Kodi Koora</div><div class="mitem-desc">Rich, slow-cooked Telugu chicken curry &mdash; best with rice or ragi sangati.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Kodi Koora</div><div class="mitem-desc">Rich, slow-cooked Telugu chicken curry, best with rice or ragi sangati.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Curry</div><div class="mitem-desc">Slow-cooked goat meat simmered in a rich, aromatic gravy.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Dal</div><div class="mitem-desc">Tangy Indian lentil curry made with slow-cooked mutton.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Shahi Korma</div><div class="mitem-desc">Luxurious Mughlai-style curry with rich, velvety sauce.</div></div></div>
@@ -527,8 +525,8 @@ gtag('config', 'G-03WND9ZQL7');
         </div>
       </div>
 
-      <div class="mcat" data-anim>
-        <div class="mcat-head"><h3>Main Course &mdash; Veg</h3><span class="mcat-count">8</span></div>
+      <div class="mcat" data-anim="">
+        <div class="mcat-head"><h3>Main Course — Veg</h3><span class="mcat-count">8</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Egg Curry (4 pcs)</div><div class="mitem-desc">Hard-boiled eggs simmered in savory aromatic gravy.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Gutti Vankaya Kura</div><div class="mitem-desc">Stuffed eggplants cooked in a classic South Indian spiced masala.</div></div></div>
@@ -537,23 +535,23 @@ gtag('config', 'G-03WND9ZQL7');
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Paneer Butter Masala</div><div class="mitem-desc">Rich creamy North Indian curry with soft paneer cubes.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Paneer Tikka Masala</div><div class="mitem-desc">Creamy spiced North Indian curry with grilled paneer.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Sambar</div><div class="mitem-desc">Traditional South Indian lentil stew with tamarind and vegetables.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Tomato Pappu</div><div class="mitem-desc">Andhra-style toor dal with tomatoes &mdash; everyday comfort food.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Tomato Pappu</div><div class="mitem-desc">Andhra-style toor dal with tomatoes, everyday comfort food.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Special Combos</h3><span class="mcat-count">6</span></div>
         <div class="mcat-items">
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bagara Rice + Kodi Kura</div><div class="mitem-desc">Traditional Telangana iconic combo &mdash; aromatic bagara rice with chicken curry.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bagara Rice + Kodi Kura</div><div class="mitem-desc">Traditional Telangana iconic combo, aromatic bagara rice with chicken curry.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Hyderabadi Comfort Combo</div><div class="mitem-desc">Signature aromatic meal from the Telangana and Hyderabad region.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Pulao + Chicken Sambar Rice + Curd Rice</div><div class="mitem-desc">Three-in-one satisfying South Indian meal combo.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Ragi Sangati + Kodi Koora</div><div class="mitem-desc">Traditional, rustic and highly nutritious meal combination.</div></div></div>
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Ragi Sangati + Mutton Pulusu</div><div class="mitem-desc">Legendary South Indian combination &mdash; millet mudde with spicy mutton gravy.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Ragi Sangati + Mutton Pulusu</div><div class="mitem-desc">Legendary South Indian combination, millet mudde with spicy mutton gravy.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Ragi Sangati + Gutti Vankaya + Curd Rice</div><div class="mitem-desc">Complete vegetarian Telangana comfort meal.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Biryani</h3><span class="mcat-count">9</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Boneless Chicken Biryani</div><div class="mitem-desc">Tender boneless chicken pieces with aromatic basmati rice.</div></div></div>
@@ -567,34 +565,34 @@ gtag('config', 'G-03WND9ZQL7');
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Pulao</h3><span class="mcat-count">5</span></div>
         <div class="mcat-items">
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bheemavaram Kodi Pulao</div><div class="mitem-desc">Andhra-style one-pot chicken rice &mdash; spicy and aromatic.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bheemavaram Kodi Pulao</div><div class="mitem-desc">Andhra-style one-pot chicken rice — spicy and aromatic.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Bheemavaram Mutton Pulao</div><div class="mitem-desc">Spicy Andhra-style one-pot mutton rice.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Gongura Kodi Pulao</div><div class="mitem-desc">Authentic Andhra chicken rice with sorrel leaves.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Gongura Mutton Pulao</div><div class="mitem-desc">Tender mutton cooked with tangy gongura and basmati rice.</div></div></div>
-          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Gongura Royyala Pulao</div><div class="mitem-desc">Prawn pulao with tangy sorrel leaves &mdash; a signature Andhra dish.</div></div></div>
+          <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Gongura Royyala Pulao</div><div class="mitem-desc">Prawn pulao with tangy sorrel leaves, a signature Andhra dish.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Rice</h3><span class="mcat-count">10</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Bagara Rice</div><div class="mitem-desc">Aromatic rice cooked with rich spices and tempered ingredients.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Coconut Rice</div><div class="mitem-desc">Flavorful rice cooked with coconut and aromatic spices.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Curd Rice</div><div class="mitem-desc">Refreshing, creamy blend of yogurt and rice &mdash; a soothing classic.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Curd Rice</div><div class="mitem-desc">Refreshing, creamy blend of yogurt and rice, a soothing classic.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Egg Rice</div><div class="mitem-desc">Fragrant basmati cooked with spiced eggs and aromatic herbs.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Gutti Vankaya Rice</div><div class="mitem-desc">Fragrant basmati with spiced stuffed brinjal.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Pulao</div><div class="mitem-desc">Spiced chicken pulao with fragrant basmati and aromatic herbs.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Rice</div><div class="mitem-desc">Tender mutton cooked with aromatic spices and basmati rice.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Paneer Capsicum Pulao</div><div class="mitem-desc">Aromatic paneer and bell pepper pulao with fragrant spices.</div></div></div>
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Prawn Rice</div><div class="mitem-desc">Fragrant basmati with succulent prawns and aromatic spices.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Steamed Rice</div><div class="mitem-desc">Light and fluffy plain steamed rice &mdash; perfect with any curry.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Steamed Rice</div><div class="mitem-desc">Light and fluffy plain steamed rice, perfect with any curry.</div></div></div>
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Soup, Pickles &amp; Breads</h3><span class="mcat-count">7</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Mutton Marag</div><div class="mitem-desc">Rich, creamy aromatic Hyderabadi soup slow-cooked with mutton.</div></div></div>
@@ -607,7 +605,7 @@ gtag('config', 'G-03WND9ZQL7');
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Family Packs</h3><span class="mcat-count">2</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot nv"></span><div class="mitem-text"><div class="mitem-name">Chicken Biryani Family Pack</div><div class="mitem-desc">Generous family-sized pack of flavorful chicken biryani.</div></div></div>
@@ -615,27 +613,27 @@ gtag('config', 'G-03WND9ZQL7');
         </div>
       </div>
 
-      <div class="mcat" data-anim>
+      <div class="mcat" data-anim="">
         <div class="mcat-head"><h3>Sweets</h3><span class="mcat-count">5</span></div>
         <div class="mcat-items">
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Ariselu</div><div class="mitem-desc">Traditional festive South Indian sweet made from rice and jaggery.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Bobbatlu (Puran Poli)</div><div class="mitem-desc">Traditional sweet stuffed flatbread &mdash; the Bellam in Bellam &amp; Kaaram.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Gulab Jamun</div><div class="mitem-desc">Soft, syrup-soaked milk-solid dumplings &mdash; a classic Indian dessert.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Bobbatlu (Puran Poli)</div><div class="mitem-desc">Traditional sweet stuffed flatbread, the Bellam in Bellam &amp; Kaaram.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Gulab Jamun</div><div class="mitem-desc">Soft, syrup-soaked milk-solid dumplings, a classic Indian dessert.</div></div></div>
           <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Semiya Payasam</div><div class="mitem-desc">Creamy, sweet South Indian dessert made with vermicelli and milk.</div></div></div>
-          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Rava Laddu (10 pcs)</div><div class="mitem-desc">Traditional semolina sweet balls &mdash; crumbly, fragrant and festive.</div></div></div>
+          <div class="mitem"><span class="mdot vg"></span><div class="mitem-text"><div class="mitem-name">Rava Laddu (10 pcs)</div><div class="mitem-desc">Traditional semolina sweet balls, crumbly, fragrant and festive.</div></div></div>
         </div>
       </div>
 
     </div>
 
-    <div class="menu-cta-row" data-anim>
+    <div class="menu-cta-row" data-anim="">
       <div class="order-row" style="justify-content:center;">
         <a class="btn btn-zomato" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
           Order on Zomato
         </a>
         <a class="btn btn-swiggy" href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path><path d="M9 11V9a3 3 0 0 1 6 0v2"></path></svg>
           Order on Swiggy
         </a>
       </div>
@@ -648,39 +646,39 @@ gtag('config', 'G-03WND9ZQL7');
 <section class="info" id="visit">
   <div class="wrap">
     <div class="info-grid">
-      <div data-anim>
+      <div data-anim="">
         <p class="eyebrow">Find Us</p>
         <h2 class="sec-title" style="margin-bottom:1.5rem;">Kitchen &amp; Details</h2>
         <div class="info-card">
           <div class="info-row">
-            <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><h4>Kitchen Location</h4><p>2nd Floor, Plot #14, Pragathi Nagar, Old Safilguda, Opp. Sri Chaitanya School, Hyderabad, Telangana 500062</p></div>
+            <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+            <div><h3>Kitchen Location</h3><p>2nd Floor, Plot #14, Pragathi Nagar, Old Safilguda, Opp. Sri Chaitanya School, Hyderabad, Telangana 500062</p></div>
           </div>
           <div class="info-row">
-            <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-            <div><h4>Cuisine</h4><p>Sweet &amp; Spicy Telugu &middot; Home-Style &middot; Delivery Only</p></div>
+            <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
+            <div><h3>Cuisine</h3><p>Sweet &amp; Spicy Telugu · Home-Style · Delivery Only</p></div>
           </div>
           <div class="info-row">
-            <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <div><h4>Average Cost</h4><p>&#8377;250 for one person</p></div>
+            <div class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+            <div><h3>Average Cost</h3><p>₹250 for one person</p></div>
           </div>
         </div>
       </div>
-      <div data-anim data-delay="1">
+      <div data-anim="" data-delay="1">
         <p class="eyebrow">Kitchen Hours</p>
         <h2 class="sec-title" style="margin-bottom:1.5rem;">When We Cook</h2>
         <div class="info-card">
           <ul class="hours-list">
             <li><span class="day">Monday</span><span class="time">Closed</span></li>
-            <li><span class="day">Tuesday &ndash; Sunday</span><span class="time">12:00 PM &ndash; 11:00 PM</span></li>
+            <li><span class="day">Tuesday – Sunday</span><span class="time">12:00 PM – 11:00 PM</span></li>
           </ul>
           <div class="order-row" style="justify-content:flex-start; margin-top:1.6rem;">
-            <a class="btn btn-zomato" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener" style="font-size:0.95rem; padding:0.8rem 1.4rem;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <a class="btn btn-zomato" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener" style="font-size: 1.0rem; padding:0.8rem 1.4rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
               Zomato
             </a>
-            <a class="btn btn-swiggy" href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener" style="font-size:0.95rem; padding:0.8rem 1.4rem;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>
+            <a class="btn btn-swiggy" href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener" style="font-size: 1.0rem; padding:0.8rem 1.4rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path><path d="M9 11V9a3 3 0 0 1 6 0v2"></path></svg>
               Swiggy
             </a>
           </div>
@@ -688,8 +686,8 @@ gtag('config', 'G-03WND9ZQL7');
       </div>
     </div>
   
-      <div data-anim style="margin-top:2.6rem;border-radius:18px;overflow:hidden;box-shadow:0 12px 44px rgba(0,0,0,.14);border:1px solid rgba(0,0,0,.06)">
-        <iframe title="Bellam &amp; Kaaram kitchen location in Old Safilguda, Secunderabad" src="https://www.google.com/maps?q=Pragathi+Nagar,+Old+Safilguda,+Secunderabad,+Telangana+500062&amp;output=embed" width="100%" height="360" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div data-anim="" style="margin-top:2.6rem;border-radius:18px;overflow:hidden;box-shadow:0 12px 44px rgba(0,0,0,.14);border:1px solid rgba(0,0,0,.06)">
+        <iframe title="Bellam &amp; Kaaram kitchen location in Old Safilguda, Secunderabad" src="https://www.google.com/maps?q=Pragathi+Nagar,+Old+Safilguda,+Secunderabad,+Telangana+500062&amp;output=embed" width="100%" height="360" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
       </div>
 </div>
 </section>
@@ -699,9 +697,9 @@ gtag('config', 'G-03WND9ZQL7');
   <p class="foot-line">Sweet &amp; Spicy Telugu home food, delivered fresh from our Old Safilguda Cloud Kitchen in Secunderabad, Hyderabad.</p>
   <div class="foot-order">
     <a class="btn-zomato" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener" style="color:#fff;">Order on Zomato</a>
-    <a class="btn-swiggy" href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener" style="color:#fff;">Order on Swiggy</a>
+    <a class="btn-swiggy" href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener" style="color:#2A1608;">Order on Swiggy</a>
   </div>
-  <p class="foot-copy">&copy; 2026 Bellam &amp; Kaaram &middot; Old Safilguda, Secunderabad, Hyderabad, Telangana</p>
+  <p class="foot-copy">© 2026 Bellam &amp; Kaaram · Old Safilguda, Secunderabad, Hyderabad, Telangana</p>
 </footer>
 
 <script>
@@ -741,6 +739,7 @@ gtag('config', 'G-03WND9ZQL7');
   })();
 </script>
 
-</body>
-</html>
 
+
+
+</body></html>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://preview-bellam-kaaram.onrender.com/sitemap.xml
+Sitemap: https://bellamkaram.online/sitemap.xml

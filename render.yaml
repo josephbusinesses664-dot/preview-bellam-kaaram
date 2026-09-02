@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: preview-bellam-kaaram
+    runtime: static
+    staticPublishPath: .
+    buildCommand: ""
+    pullRequestPreviewsEnabled: false
