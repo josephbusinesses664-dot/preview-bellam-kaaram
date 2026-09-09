@@ -1,0 +1,116 @@
+{
+  "title": "Bellam & Kaaram — choose the visual world",
+  "question": "The roll assigned The Muggu Doorstep. Keep it, take an alternate, or re-roll. (This is a from-scratch redesign of the live client site — the current cream/Playfair template is the anti-reference.)",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "The Muggu Doorstep",
+      "kicker": "THE ROLL",
+      "lineage": "the dawn muggu (rangoli) drawn in rice flour on a swept Telangana threshold — dot-lattice geometry, chalk-white on reddened earth, turmeric and marigold at the festival edge",
+      "thesis": "The kitchen as the Telugu doorstep you pass every morning: a dot-grid muggu is literally the page's structure, and its two poles are bellam (jaggery-warm) and kaaram (chilli-hot). ఇంటి వంట, ఇంటి గుమ్మం.",
+      "palette": ["#f4ede0", "#5b3a28", "#a5231b", "#e0a92e", "#e8531f"],
+      "materials": ["swept-earth kaavi ground", "chalk / rice-flour muggu lines", "turmeric + marigold accents", "newsprint tooth", "rubber-stamp price marks"],
+      "viewport": "A full-bleed swept-earth ground with a chalk muggu dot-lattice drawn across it; the name బెల్లం & కారం set large in the lattice, the axis splitting warm-left / hot-right; two order buttons (Zomato / Swiggy) sit on the threshold line; a strip of today's dishes flips into the grid beneath.",
+      "risk": "A dot-lattice can read as decorative wallpaper if it is not actually load-bearing — the muggu must BE the layout grid (menu cells, section rhythm), not a background texture, or it collapses into another patterned-cream food site.",
+      "raised": [
+        { "from": "challenger-fight-poster", "raise": "SWEET↔SPICE AXIS: the page runs on a single bellam–kaaram axis — warm jaggery tones anchor one pole, chilli red the other, and every menu item is tagged to its side so the big menu is navigable by taste, not just by category." },
+        { "from": "challenger-split-flap", "raise": "RULED MENU GRID + FLIP: the muggu dot-lattice becomes a strict fixed-cell grid for the ~90 menu items; dishes cascade / flip into their cells as a section scrolls in — the one authored motion moment, nothing else animates." },
+        { "from": "challenger-cracktro", "raise": "UNBROKEN GROUND: the swept-earth muggu field runs continuously top to bottom; no section drops out to a flat white card zone — one continuous printed threshold." },
+        { "from": "challenger-zine", "raise": "VERNACULAR PRINT + RESERVED ACTION COLOUR: newsprint tooth, rubber-stamp ₹ pricing, a torn tiffin-packet edge on panels; the aggregator brand colour (Zomato red / Swiggy orange) is reserved strictly for the order buttons — nothing decorative may borrow it." },
+        { "from": "challenger-pickle", "raise": "NAME THE SPECIFIC THING: gongura, avakaya, bellam, kaaram, ragi sangati, bagara rice appear as themselves with one line of what they are — never flattened to \"authentic South Indian\"." },
+        { "from": "challenger-sewing", "raise": "ONE SIGNAL FOR THE LIVE PATH: only the active order route carries the single reserved signal colour; the visitor's eye always lands on \"how do I order\" first." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "The Meals Plate",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "the Andhra bhojanam — a banana leaf or round steel thali with rice at the centre and many small servings ringed around it, pickle and ghee at the edge",
+      "thesis": "The composition IS the menu: the whole spread laid out at once, each katori a dish, the eye moving around the leaf. The most direct way to say \"a real, generous Telugu meal.\"",
+      "palette": ["#f5f1e6", "#2f5233", "#c9541e", "#e3b23c", "#7a1f14"],
+      "materials": ["banana-leaf green", "brushed steel thali", "rice white", "sambar orange", "ghee gold"],
+      "viewport": "A top-down leaf/thali filling the first screen, rice mound centred, dishes ringed around it as tappable servings, order buttons on the rim.",
+      "risk": "This is the most expected move for any food site — 'show the spread' — and Bellam & Kaaram has NO photography, so the plate would have to be illustrated or authored; done at less than full craft it reads as clip-art, not a designed identity."
+    },
+    {
+      "id": "challenger-fight-poster",
+      "label": "Bellam versus Kaaram",
+      "verdict": "competitive",
+      "lineage": "the Telugu wrestling / cinema hoarding — two names in heavy slab caps colliding at a painted VS, undercard shrinking beneath, one gold accent",
+      "thesis": "The brand's own idea made literal: BELLAM ⚔ KAARAM, sweet vs spicy as a title-fight, the menu the undercard ranked by type size; sweet dishes on one half, spicy on the other.",
+      "palette": ["#f1e7d2", "#1a1712", "#d99a2b", "#b3241a"],
+      "materials": ["newsprint cream + halftone", "heavy ink slab caps", "one arena gold", "letterpress press-texture"],
+      "viewport": "A full-bleed bill split down a central VS axis — BELLAM (gold) left, KAARAM (red) right — collision-scale slab caps to both edges, address + hours in letterpress smalls under the mark, order buttons as the ticket line.",
+      "case": "Fuses on product clarity: the sweet/spice split IS the page structure and it makes 90 items navigable. Loses a notch on audience identification — a fight/arena read is louder and more commercial than 'warm home food', unless it's carried as a Telugu film/kabaddi hoarding rather than a Vegas card.",
+      "risk": "Slab-caps collision can bury legibility and the menu detail under spectacle; the undercard-shrink must stop before the veg/non-veg flag and price become unreadable."
+    },
+    {
+      "id": "challenger-split-flap",
+      "label": "The Departure Board",
+      "verdict": "competitive",
+      "lineage": "a rail-concourse split-flap board at rush hour — matte-black flaps, condensed white caps in fixed cells, ruled rows and columns, per-character cascade",
+      "thesis": "A large menu is a board of many rows: dishes flip into place character by character, categories are the columns, and the whole family scans it at once the way a concourse looks up together.",
+      "palette": ["#161616", "#f2f0ea", "#8b8b86", "#e8a629"],
+      "materials": ["matte flap faces", "brushed-steel frame", "condensed white caps", "amber row lamp"],
+      "viewport": "A ruled board filling the screen: BELLAM & KAARAM on the header flaps, today's dishes flipping into rows beneath, an amber lamp on the row that's 'live now' (open hours), order buttons pinned as the board's action bar.",
+      "case": "Wins product clarity outright — a fixed-cell ruled grid is exactly how you show ~90 scannable items, and the character-flip is a real signature. Loses audience identification: a train-board aesthetic has no cultural connection to Telugu home food; families don't think 'Termini'.",
+      "risk": "Cold and infrastructural if the warmth doesn't come from somewhere — needs the Telugu script and a warm accent doing real work, or it's just a timetable."
+    },
+    {
+      "id": "challenger-zine",
+      "label": "The Photocopied Flyer",
+      "verdict": "competitive",
+      "lineage": "the neighbourhood tiffin-centre pamphlet — the xeroxed sheet slid under your door, headlines cut from a Telugu newspaper, prices rubber-stamped, brown-paper-packet edges, one day-glo colour for the offer",
+      "thesis": "A real Hyderabad-neighbourhood artifact: the local food joint's photocopied menu-flyer, gone gritty through generations, hand-corrected, with the order line screaming in day-glo.",
+      "palette": ["#efece4", "#141414", "#b8b3a6", "#fc5b18"],
+      "materials": ["copy-paper tooth + toner banding", "Telugu newsprint headline scraps", "rubber-stamp pricing", "torn packet edges", "day-glo action ink"],
+      "viewport": "A photocopied sheet: bold cut-out Telugu + English headline, typewriter menu columns glued slightly crooked, stamped ₹ prices, a torn edge along the bottom, the Zomato/Swiggy buttons in day-glo as the 'call now' line.",
+      "case": "Holds audience identification — the photocopied local-joint flyer is a genuine vernacular artifact people in Old Safilguda recognise. Product clarity is middling: ransom-cut headlines fight legibility, though typewriter body columns can hold a menu.",
+      "risk": "Grit for grit's sake reads as a student project; the degradation has to stay the exception (headlines, edges) while the menu body stays cleanly legible."
+    },
+    {
+      "id": "challenger-pickle",
+      "label": "The Pickle Shelf",
+      "verdict": "competitive",
+      "lineage": "the Andhra pantry — avakaya and gongura jars on a shelf, kraft labels hand-lettered with contents and date, brine haze, seasonal reds and greens",
+      "thesis": "Each menu category is a labelled jar on the kitchen shelf; ingredient specificity (the chilli, the gongura, the jaggery) is the whole personality.",
+      "palette": ["#f0e6d0", "#7a1f14", "#3f5f2e", "#d99a2b"],
+      "materials": ["jar glass + brine haze", "kraft labels", "hand-lettered script over stamped date caps", "shelf lines"],
+      "viewport": "A shelf of labelled jars, each a category; tapping a jar opens its dishes; order buttons on the shelf edge.",
+      "case": "Strong audience identification via Andhra pickle culture (avakaya is a Telugu identity marker). Product clarity partial — the fermentation/timer mechanic of the source doesn't map to tap-to-order, so it becomes a static shelf metaphor.",
+      "risk": "A jar-shelf with no real interaction is just a themed card grid; without the maturation mechanic it under-delivers on the source's promise."
+    },
+    {
+      "id": "challenger-cracktro",
+      "label": "Cracktro Scroller",
+      "verdict": "declined",
+      "lineage": "a 2am demoscene title screen — one bitmap face on an emissive black void, depth as rank, drifting dust fields, nothing ever enclosed",
+      "palette": ["#080808", "#eae6dc", "#e8a629"],
+      "materials": ["emissive black void", "bitmap type", "grey dust layers"],
+      "case": "Fuses poorly: a Telugu family ordering dinner does not identify with a demoscene aesthetic, and 'depth is rank' fights the price / veg-flag / category legibility a menu needs.",
+      "kept": "Total environmental commitment — one continuous field, no section that feels like a different site."
+    },
+    {
+      "id": "challenger-sewing",
+      "label": "Sewing Pattern Envelope",
+      "verdict": "declined",
+      "lineage": "a home dressmaking pattern — manila tissue, black drafting marks, lettered views A/B/C, circled piece numbers, one dressmaker-red for the committed choice",
+      "palette": ["#e8d8b8", "#1c1c1c", "#c02a24"],
+      "materials": ["manila tissue", "drafting marks", "dressmaker red"],
+      "case": "Fuses poorly: no cultural connection to Telugu food, and the 'choose a size, others go dashed' selection model is overwrought for tap-to-order.",
+      "kept": "One reserved colour marks exactly the committed choice — apply it so a single signal colour marks only the live order path."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"], "note": "The Pickle Shelf is also in the pool as a fourth competitive alternate (dropped from the hand only for the three-card limit)." },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "What every 'authentic South Indian cloud kitchen' site ships, done well: cream ground, a serif display + friendly sans, soft-shadowed white photo cards, a bestsellers row, a warm CTA panel. Exactly the current site, executed cleanly.",
+    "palette": ["#fff7ea", "#992a17", "#e8a22b", "#ffffff"],
+    "materials": ["cream ground", "Playfair/Poppins", "soft-shadow photo cards"],
+    "viewport": "The arrangement a visitor expects from a delivery-brand landing page, at full craft.",
+    "risk": "Indistinguishable from every other cloud-kitchen site — which is what the redesign was asked to escape."
+  },
+  "steer": true
+}

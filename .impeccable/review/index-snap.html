@@ -20,7 +20,425 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Gurajada&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>/* ============================================================
+   BELLAM & KAARAM — "The Muggu Doorstep"
+   The dawn rice-flour threshold pattern as the page's grid.
+   Two poles: బెల్లం (bellam / jaggery-warm) ↔ కారం (kaaram / chilli-hot).
+   Palette  chalk #f4ede0 · swept earth #4a2f20 · chilli #a5231b
+            turmeric #e0a92e · marigold #e8531f · ink #241811
+   Type     Darker Grotesque (display) · Hanken Grotesk (body)
+            Gurajada + Noto Sans Telugu (Telugu)
+   ============================================================ */
+
+:root {
+  --chalk: #f4ede0;
+  --chalk-dim: #ded2be;
+  --earth: #4a2f20;
+  --earth-deep: #37211566;
+  --earth-2: #5c3b28;
+  --kaavi: #7a3f28;
+  --chilli: #a5231b;
+  --chilli-deep: #7d1811;
+  --turmeric: #f4c150;
+  --jaggery: #b9782e;
+  --marigold: #f26a2e;
+  --leaf: #3f6b3a;
+  --ink: #241811;
+  --ink-soft: #5a4636;
+  --earth-fine: #ddccb8;
+  --zomato: #c92030;
+  --swiggy: #fc8019;
+
+  --shell: min(1120px, 92vw);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+* , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  background: var(--earth);
+  color: var(--chalk);
+  font-family: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: clamp(15px, .5vw + 13.6px, 17px);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* swept-earth tooth, fixed behind everything */
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='.5'/></svg>");
+  background-blend-mode: soft-light;
+}
+
+h1, h2, h3, .display {
+  font-family: "Darker Grotesque", "Hanken Grotesk", sans-serif;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -.01em;
+  text-wrap: balance;
+}
+.te {
+  font-family: "Noto Sans Telugu", "Gurajada", sans-serif;
+  font-weight: 500;
+}
+.te-display { font-family: "Gurajada", "Noto Sans Telugu", serif; font-weight: 400; }
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ---- browser surfaces wear the design ---- */
+::selection { background: var(--turmeric); color: var(--ink); }
+:focus-visible { outline: 2px dashed var(--turmeric); outline-offset: 3px; border-radius: 2px; }
+html { scrollbar-color: var(--kaavi) var(--earth); }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--earth-2); }
+::-webkit-scrollbar-thumb { background: var(--kaavi); border: 3px solid var(--earth-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+/* ============================================================ MUGGU LATTICE */
+/* the dot-lattice that is the actual structural grid */
+.muggu-field {
+  --dot: rgba(244,237,224,.16);
+  background-image: radial-gradient(circle, var(--dot) 1.6px, transparent 1.8px);
+  background-size: 34px 34px;
+  background-position: center;
+}
+.rule {
+  height: 0; border: 0;
+  border-top: 2px solid var(--chalk);
+  opacity: .55;
+  /* dashed like a muggu stroke */
+  border-top-style: dashed;
+}
+
+/* ============================================================ SHELL / SECTIONS */
+.wrap { width: var(--shell); margin-inline: auto; }
+section { padding-block: clamp(2.6rem, 5vw, 4.2rem); }
+
+.kicker {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 800; font-size: .82rem;
+  letter-spacing: .04em;
+  color: var(--turmeric);
+  display: flex; align-items: baseline; gap: .6rem;
+}
+.kicker .te { color: var(--chalk-dim); font-weight: 500; }
+
+h2.sec {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  color: var(--chalk);
+  margin: .5rem 0 1rem;
+  max-width: 20ch;
+}
+.sec-lede { color: var(--chalk-dim); max-width: 54ch; font-size: clamp(1rem, 1.2vw, 1.14rem); }
+
+/* ---- stamped meta chips ---- */
+.stamp {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700; font-size: .8rem; letter-spacing: .02em;
+  color: var(--chalk);
+  border: 1.5px solid var(--chalk);
+  padding: .28rem .7rem;
+  border-radius: 2px;
+  transform: rotate(-.6deg);
+}
+.stamp.hot { color: var(--chalk); border-color: var(--marigold); }
+.stamp.sweet { color: var(--chalk); border-color: var(--turmeric); }
+
+/* ---- order buttons: the ONLY place aggregator colour appears ---- */
+.order-row { display: flex; flex-wrap: wrap; gap: .8rem; }
+.order {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 800; font-size: .92rem; letter-spacing: .01em;
+  color: #fff; text-decoration: none;
+  padding: .9rem 1.5rem;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform .14s var(--ease), box-shadow .14s var(--ease), filter .14s var(--ease);
+}
+.order svg { width: 18px; height: 18px; }
+.order.zomato { background: var(--zomato); }
+.order.swiggy { background: var(--swiggy); color: var(--ink); }
+.order:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); filter: brightness(1.04); }
+.order:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.order.ghost {
+  background: transparent; color: var(--chalk);
+  border-color: var(--chalk); box-shadow: 4px 4px 0 rgba(244,237,224,.25);
+}
+.order.ghost:hover { background: var(--kaavi); border-color: var(--turmeric); }
+
+/* ============================================================ NAV */
+nav.top {
+  position: sticky; top: 0; z-index: 60;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+  padding: .7rem clamp(1rem, 4vw, 2.4rem);
+  background: color-mix(in oklab, var(--earth), black 6%);
+  border-bottom: 2px solid var(--kaavi);
+  backdrop-filter: blur(6px);
+}
+.brand { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; }
+.brand svg { width: 30px; height: 30px; flex: none; }
+.brand b {
+  font-family: "Darker Grotesque", sans-serif; font-weight: 800;
+  font-size: 1.15rem; color: var(--chalk); letter-spacing: -.01em;
+}
+.brand b .amp { color: var(--turmeric); }
+.nav-links { display: flex; align-items: center; gap: 1.1rem; font-weight: 600; font-size: .92rem; }
+.nav-links a { text-decoration: none; color: var(--chalk-dim); transition: color .15s; }
+.nav-links a:hover, .nav-links a[aria-current] { color: var(--chalk); }
+.nav-order-wrap { position: relative; }
+.nav-order-btn {
+  font: inherit; font-weight: 800; font-size: .86rem;
+  color: var(--ink); background: var(--turmeric);
+  border: 2px solid var(--ink); border-radius: 3px;
+  padding: .4rem .9rem; cursor: pointer;
+}
+.nav-order-menu {
+  position: absolute; right: 0; top: calc(100% + 8px);
+  display: none; flex-direction: column;
+  min-width: 180px; background: var(--chalk); color: var(--ink);
+  border: 2px solid var(--ink); border-radius: 3px;
+  box-shadow: 5px 5px 0 var(--chilli-deep);
+  overflow: hidden;
+}
+.nav-order-wrap.open .nav-order-menu { display: flex; }
+.nav-order-menu a {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .7rem .9rem; text-decoration: none; font-weight: 700; font-size: .9rem;
+}
+.nav-order-menu a + a { border-top: 1.5px solid var(--chalk-dim); }
+.nav-links .nav-order-menu a { color: var(--ink); }
+.nav-order-menu a:hover { background: var(--turmeric); color: var(--ink); }
+@media (max-width: 620px) {
+  .nav-links a:not(.nav-menu-link) { display: none; }
+}
+
+/* ============================================================ HERO / DOORSTEP */
+.doorstep {
+  position: relative;
+  padding: clamp(2.4rem, 6vw, 4.4rem) clamp(1rem, 4vw, 2.4rem) clamp(2.8rem, 5vw, 4rem);
+  text-align: center;
+  overflow: hidden;
+}
+.doorstep::before { /* jaggery glow, left / bellam pole */
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(42% 55% at 16% 34%, rgba(224,169,46,.32), transparent 62%),
+    radial-gradient(44% 58% at 85% 66%, rgba(165,35,27,.30), transparent 60%);
+}
+.doorstep > * { position: relative; z-index: 1; }
+.ds-tag {
+  display: inline-flex; gap: .5rem; align-items: center;
+  font-weight: 700; font-size: .8rem; letter-spacing: .03em;
+  color: var(--chalk); border: 1.5px solid var(--chalk);
+  padding: .3rem .85rem; border-radius: 999px; margin-bottom: 1.4rem;
+  opacity: .9;
+}
+.ds-te {
+  font-family: "Gurajada", "Noto Sans Telugu", serif;
+  font-size: clamp(2.6rem, 10vw, 6rem);
+  line-height: 1.06; color: var(--chalk);
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center;
+  column-gap: .28em; margin-bottom: .1em;
+}
+.ds-te .bellam { color: var(--turmeric); }
+.ds-te .amp { color: var(--chalk-dim); font-size: .7em; }
+.ds-te .kaaram { color: var(--marigold); }
+.ds-en {
+  font-family: "Darker Grotesque", sans-serif; font-weight: 800;
+  font-size: clamp(1.1rem, 3.2vw, 1.9rem); letter-spacing: .18em;
+  text-transform: uppercase; color: var(--chalk-dim);
+  margin-bottom: 1.1rem;
+}
+.ds-lede {
+  font-size: clamp(1.02rem, 1.5vw, 1.24rem);
+  color: var(--chalk); max-width: 40ch; margin: 0 auto 1.8rem;
+}
+.ds-lede b { color: var(--turmeric); font-weight: 700; }
+.doorstep .order-row { justify-content: center; }
+.ds-meta {
+  margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .8rem 1rem;
+}
+
+/* ============================================================ AXIS SECTION */
+.axis .wrap { text-align: center; }
+.axis-bar {
+  margin: 2rem auto 0; max-width: 880px;
+  display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: stretch; gap: 0;
+  border: 2px solid var(--chalk); border-radius: 4px; overflow: hidden;
+}
+.axis-half { padding: 1.6rem 1.4rem; text-align: left; }
+.axis-half.b { background: linear-gradient(160deg, rgba(224,169,46,.22), rgba(185,120,46,.12)); }
+.axis-half.k { background: linear-gradient(160deg, rgba(232,83,31,.2), rgba(165,35,27,.14)); text-align: right; }
+.axis-half .word { font-family: "Gurajada", serif; font-size: 2rem; line-height: 1; }
+.axis-half.b .word { color: var(--turmeric); }
+.axis-half.k .word { color: var(--marigold); }
+.axis-half .rom { font-weight: 800; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; color: var(--chalk-dim); margin: .3rem 0 .7rem; }
+.axis-half p { color: var(--chalk); font-size: .96rem; }
+.axis-vs {
+  display: grid; place-items: center; width: 62px;
+  background: var(--chalk); color: var(--ink);
+  font-family: "Darker Grotesque", sans-serif; font-weight: 800; font-size: 1.5rem;
+}
+@media (max-width: 640px) {
+  .axis-bar { grid-template-columns: 1fr; }
+  .axis-half.k, .axis-half.b { text-align: left; }
+  .axis-vs { width: auto; padding: .3rem; font-size: 1.1rem; }
+}
+
+/* ============================================================ MENU GRID (muggu cells) */
+.menu-grid {
+  display: grid; gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--chalk);
+  border: 2px solid var(--chalk);
+  border-radius: 4px; overflow: hidden;
+  margin-top: 1.8rem;
+}
+@media (max-width: 860px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .menu-grid { grid-template-columns: 1fr; } }
+.dish {
+  background: var(--earth-2);
+  padding: 1.15rem 1.15rem 1.25rem;
+  display: flex; flex-direction: column; gap: .5rem;
+}
+.dish-head { display: flex; align-items: flex-start; gap: .5rem; }
+.vdot { width: 12px; height: 12px; flex: none; margin-top: 5px; border: 2px solid; border-radius: 2px; }
+.vdot.veg { border-color: var(--leaf); background: var(--leaf); }
+.vdot.nonveg { border-color: var(--chilli); background: var(--chilli); }
+.dish-name { font-family: "Darker Grotesque", sans-serif; font-weight: 800; font-size: 1.16rem; line-height: 1.08; color: var(--chalk); flex: 1; }
+.dish-desc { font-size: .84rem; color: var(--chalk-dim); line-height: 1.5; }
+.dish-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; padding-top: .4rem; }
+.tag {
+  font-family: "Hanken Grotesk", sans-serif; font-weight: 800;
+  font-size: .76rem; letter-spacing: .06em; text-transform: uppercase;
+  padding: .12rem .5rem; border-radius: 2px;
+}
+.tag.hot { background: var(--chilli-deep); color: #ffe0c8; }
+.tag.sweet { background: var(--jaggery); color: #241811; }
+.tag.reg { background: rgba(244,237,224,.16); color: var(--chalk); }
+
+.menu-more { text-align: center; margin-top: 2.4rem; }
+
+/* ============================================================ LEDGER (why order) */
+.ledger {
+  margin-top: 2.2rem;
+  border: 2px solid var(--chalk); border-radius: 4px;
+  background: color-mix(in oklab, var(--earth-2), black 4%);
+}
+.ledger-row {
+  display: grid; grid-template-columns: 44px 1fr auto;
+  gap: 1rem; align-items: center;
+  padding: 1rem 1.2rem;
+}
+.ledger-row + .ledger-row { border-top: 1.5px dashed var(--kaavi); }
+.ledger-row .ln { font-family: "Darker Grotesque", sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--turmeric); }
+.ledger-row h3 { font-size: 1.05rem; color: var(--chalk); }
+.ledger-row p { font-size: .86rem; color: var(--chalk-dim); }
+.ledger-row .val { font-family: "Darker Grotesque", sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--chalk); white-space: nowrap; }
+
+/* ============================================================ VISIT */
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2.2rem; }
+@media (max-width: 760px) { .visit-grid { grid-template-columns: 1fr; } }
+.panel {
+  background: var(--chalk); color: var(--ink);
+  border: 2px solid var(--ink); border-radius: 4px;
+  padding: 1.6rem;
+  /* torn tiffin-packet edge */
+  clip-path: polygon(0 0, 100% 1.5%, 99% 100%, 1.5% 98.5%);
+}
+.panel h3 { font-family: "Darker Grotesque", sans-serif; font-weight: 800; font-size: 1.3rem; margin-bottom: .8rem; color: var(--ink); }
+.panel .row { display: flex; gap: .7rem; padding: .6rem 0; }
+.panel .row + .row { border-top: 1.5px dashed var(--chalk-dim); }
+.panel .k { font-weight: 800; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); min-width: 88px; }
+.panel .v { font-weight: 600; color: var(--ink); font-size: .92rem; }
+.panel a.maps { display: inline-block; margin-top: 1rem; font-weight: 800; color: var(--chilli); text-decoration: underline; text-underline-offset: 3px; }
+.hours-line { display: flex; justify-content: space-between; padding: .5rem 0; font-size: .92rem; }
+.hours-line + .hours-line { border-top: 1.5px dashed var(--chalk-dim); }
+.hours-line .closed { color: var(--chilli); font-weight: 700; }
+
+/* ============================================================ FOOTER */
+footer {
+  border-top: 2px solid var(--kaavi);
+  padding: clamp(2.6rem, 5vw, 4rem) clamp(1rem, 4vw, 2.4rem) 2.4rem;
+  text-align: center;
+}
+footer .fb { font-family: "Gurajada", serif; font-size: 1.8rem; color: var(--chalk); margin-bottom: .3rem; }
+footer .fb .amp { color: var(--turmeric); }
+footer .fr { color: var(--chalk-dim); max-width: 46ch; margin: .4rem auto 1.4rem; font-size: .92rem; }
+footer .order-row { justify-content: center; }
+footer .fc { margin-top: 1.6rem; font-size: .8rem; color: var(--earth-fine); }
+
+/* ============================================================ MENU PAGE */
+.menu-page-head { text-align: center; padding-top: clamp(2.6rem, 6vw, 4.5rem); }
+.mcat { margin-top: 3rem; }
+.mcat-head {
+  display: flex; align-items: baseline; gap: .8rem;
+  border-bottom: 2px solid var(--chalk); padding-bottom: .5rem; margin-bottom: 1rem;
+}
+.mcat-head h2 { font-size: clamp(1.4rem, 3vw, 2rem); color: var(--chalk); }
+.mcat-head .cnt {
+  font-weight: 800; font-size: .72rem; color: var(--ink);
+  background: var(--turmeric); padding: .12rem .5rem; border-radius: 2px;
+}
+.mcat-head .te { margin-left: auto; color: var(--chalk-dim); font-size: 1rem; }
+.mlist { display: grid; grid-template-columns: 1fr 1fr; gap: .2rem 2rem; }
+@media (max-width: 720px) { .mlist { grid-template-columns: 1fr; } }
+.mrow { display: flex; gap: .6rem; padding: .6rem 0; border-bottom: 1.5px dashed var(--kaavi); }
+.mrow:last-child { border-bottom: none; }
+.mrow .vdot { margin-top: 6px; }
+.mrow .mn { font-weight: 700; color: var(--chalk); font-size: .96rem; line-height: 1.3; }
+.mrow .md { font-size: .8rem; color: var(--chalk-dim); line-height: 1.45; margin-top: .1rem; }
+.mrow .mtag { flex: none; }
+.mrow .mtag .tag { font-size: .74rem; padding: .1rem .42rem; }
+.menu-sticky-order {
+  position: sticky; bottom: 0; z-index: 40;
+  background: color-mix(in oklab, var(--earth), black 8%);
+  border-top: 2px solid var(--kaavi);
+  padding: .8rem clamp(1rem, 4vw, 2.4rem);
+  display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap;
+}
+
+/* ---- scroll reveal (visible by default) ---- */
+.reveal { opacity: 1; }
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .dish { transition: opacity .5s var(--ease), transform .5s var(--ease); }
+.js .menu-grid:not(.in) .dish { opacity: 0; transform: translateY(14px) rotate(-1deg); }
+
+/* ---- mobile fixes ---- */
+@media (max-width: 600px) {
+  nav.top .brand b { display: none; }
+  .order-row { flex-direction: column; align-items: stretch; }
+  .order { justify-content: center; width: 100%; }
+  .doorstep { padding-top: 2rem; }
+  .ds-te { font-size: clamp(2rem, 11vw, 3rem); column-gap: .18em; }
+  .ds-lede { max-width: 34ch; }
+  .kicker { flex-wrap: wrap; }
+  .ledger-row { grid-template-columns: 34px 1fr; }
+  .ledger-row .val { grid-column: 2; padding-top: .2rem; }
+  .menu-sticky-order .order { width: auto; }
+}
+/* menu page: kill the double section spacing on categories */
+section.mcat { padding-block: 0; margin-top: clamp(1.8rem, 3.5vw, 2.8rem); }
+section.mcat:first-of-type { margin-top: 1.6rem; }
+main.wrap { padding-top: .5rem; }
+/* fill any short trailing row in the index menu grid with the ground colour, not chalk */
+.menu-grid { background: var(--kaavi); }
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"Bellam & Kaaram","description":"Delivery-only cloud kitchen serving authentic sweet & spicy Telugu home-style food, delivered across Old Safilguda, Secunderabad & Hyderabad.","servesCuisine":["Telugu","Andhra","South Indian","Home Food"],"priceRange":"₹₹","url":"https://bellamkaram.online/","hasMenu":"https://bellamkaram.online/menu.html","acceptsReservations":false,"address":{"@type":"PostalAddress","streetAddress":"2nd Floor, Plot #14, Pragathi Nagar, Old Safilguda, Opp. Sri Chaitanya School","addressLocality":"Secunderabad","addressRegion":"Telangana","postalCode":"500062","addressCountry":"IN"},"areaServed":["Old Safilguda","Yapral","Kowkoor","Secunderabad","Hyderabad"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"23:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"3.6","reviewCount":"23"},"sameAs":["https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767","https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad"],"potentialAction":{"@type":"OrderAction","target":"https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad","deliveryMethod":"http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"}}
 </script>
@@ -92,7 +510,7 @@
     <a class="nav-menu-link" href="menu.html">Menu</a>
     <a href="index.html#visit">Visit</a>
     <div class="nav-order-wrap">
-      <button class="nav-order-btn" aria-expanded="false" aria-haspopup="true">Order <svg viewBox="0 0 12 8" width="11" height="8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <button class="nav-order-btn" aria-expanded="false" aria-haspopup="true">Order &#9662;</button>
       <div class="nav-order-menu">
         <a href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h2l2.7 12.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L23 7H5"/></svg>Zomato</a>
         <a href="https://www.swiggy.com/city/hyderabad/bellam-and-kaaram-yapral-kowkoor-rest1294767" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a7 7 0 0 1 14 0v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M9 11V9a3 3 0 0 1 6 0v2"/></svg>Swiggy</a>
@@ -102,8 +520,9 @@
 </nav>
 
 <header class="doorstep muggu-field">
-  <h1 class="ds-te te-display"><span class="bellam" lang="te">బెల్లం</span><span class="amp">&amp;</span><span class="kaaram" lang="te">కారం</span></h1>
-  <p class="ds-en">Bellam &amp; Kaaram &mdash; sweet and spicy Telugu home food, Old Safilguda</p>
+  <span class="ds-tag">Delivery-only cloud kitchen &middot; Old Safilguda, Secunderabad</span>
+  <p class="ds-te te-display" lang="te"><span class="bellam">బెల్లం</span><span class="amp">&amp;</span><span class="kaaram">కారం</span></p>
+  <p class="ds-en">Bellam &amp; Kaaram</p>
   <p class="ds-lede"><b>Bellam</b> is the jaggery-sweet. <b>Kaaram</b> is the chilli-heat. Every Telugu meal lives between the two, and we cook both, fresh, to your door.</p>
   <div class="order-row">
   <a class="order zomato" href="https://www.zomato.com/hyderabad/bellam-kaaram-1-yapral-secunderabad" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h2l2.7 12.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L23 7H5"/></svg>Order on Zomato</a>
@@ -118,7 +537,8 @@
 
 <section class="axis" id="axis">
   <div class="wrap">
-    <h2 class="sec">Two flavours, <span class="te" lang="te" style="color:var(--turmeric);font-weight:600">రుచుల సమతూకం</span> one kitchen.</h2>
+    <p class="kicker">THE IDEA <span class="te" lang="te">రుచుల సమతూకం</span></p>
+    <h2 class="sec">Two flavours, one kitchen.</h2>
     <p class="sec-lede" style="margin-inline:auto">In a proper Telugu meal, the sweet rounds off the heat. That balance is the whole menu: sweet on one side, spice on the other, and you order across the line.</p>
     <div class="axis-bar reveal">
       <div class="axis-half b">
@@ -138,7 +558,8 @@
 
 <section class="menu-sec" id="menu">
   <div class="wrap">
-    <h2 class="sec">A dozen from the kitchen. <span class="te" lang="te" style="color:var(--turmeric);font-weight:600">ఏం వండుతున్నాం</span></h2>
+    <p class="kicker">THE MENU <span class="te" lang="te">ఏం వండుతున్నాం</span></p>
+    <h2 class="sec">A dozen from the kitchen.</h2>
     <p class="sec-lede">Coastal-Andhra prawn fries, Telangana millet plates, Kadapa mutton, dum biryani, festival sweets. Ninety dishes in all. Here are the ones regulars come back for.</p>
     <div class="menu-grid reveal">
       <article class="dish">
@@ -210,19 +631,21 @@
 
 <section class="why">
   <div class="wrap">
-    <h2 class="sec">Home food, delivered right. <span class="te" lang="te" style="color:var(--turmeric);font-weight:600">ఇంటి వంట</span></h2>
+    <p class="kicker">WHY ORDER <span class="te" lang="te">ఇంటి వంట</span></p>
+    <h2 class="sec">Home food, delivered right.</h2>
     <div class="ledger">
-      <div class="ledger-row"><span class="ln" aria-hidden="true">·</span><div><h3>Real regional cooking</h3><p>Recipes from Telangana and coastal-Andhra kitchens &mdash; not a generic "South Indian" menu.</p></div><span class="val">89 dishes</span></div>
-      <div class="ledger-row"><span class="ln" aria-hidden="true">·</span><div><h3>Delivery only, cooked to order</h3><p>A dedicated cloud kitchen. No dine-in, no waiting, just cooking and delivering.</p></div><span class="val">Swiggy &middot; Zomato</span></div>
-      <div class="ledger-row"><span class="ln" aria-hidden="true">·</span><div><h3>Value for a full plate</h3><p>Generous, satisfying meals at everyday prices.</p></div><span class="val">&#8377;250 / one</span></div>
-      <div class="ledger-row"><span class="ln" aria-hidden="true">·</span><div><h3>Lunch and dinner</h3><p>Open Tuesday to Sunday, midday to late.</p></div><span class="val">12&ndash;11</span></div>
+      <div class="ledger-row"><span class="ln">01</span><div><h3>Real regional cooking</h3><p>Recipes from Telangana and coastal-Andhra kitchens &mdash; not a generic "South Indian" menu.</p></div><span class="val">89 dishes</span></div>
+      <div class="ledger-row"><span class="ln">02</span><div><h3>Delivery only, cooked to order</h3><p>A dedicated cloud kitchen. No dine-in, no waiting, just cooking and delivering.</p></div><span class="val">Swiggy &middot; Zomato</span></div>
+      <div class="ledger-row"><span class="ln">03</span><div><h3>Value for a full plate</h3><p>Generous, satisfying meals at everyday prices.</p></div><span class="val">&#8377;250 / one</span></div>
+      <div class="ledger-row"><span class="ln">04</span><div><h3>Lunch and dinner</h3><p>Open Tuesday to Sunday, midday to late.</p></div><span class="val">12&ndash;11</span></div>
     </div>
   </div>
 </section>
 
 <section class="visit" id="visit">
   <div class="wrap">
-    <h2 class="sec">The kitchen. <span class="te" lang="te" style="color:var(--turmeric);font-weight:600">మా వంటిల్లు</span></h2>
+    <p class="kicker">VISIT <span class="te" lang="te">మా వంటిల్లు</span></p>
+    <h2 class="sec">The kitchen.</h2>
     <div class="visit-grid">
       <div class="panel reveal">
         <h3>Where we cook</h3>
@@ -265,7 +688,6 @@ document.documentElement.classList.add('js');
   if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal,.menu-grid').forEach(function(el){el.classList.add('in');});return;}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal,.menu-grid').forEach(function(el){io.observe(el);});
-  setTimeout(function(){document.querySelectorAll('.reveal,.menu-grid').forEach(function(el){el.classList.add('in');});io.disconnect();},2600);
 })();
 </script>
 </body>
