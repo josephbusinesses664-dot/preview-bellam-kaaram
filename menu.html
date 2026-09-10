@@ -31,7 +31,7 @@
   fbq('init',META_PIXEL_ID); fbq('track','PageView');
   window.addEventListener('DOMContentLoaded',function(){
     document.querySelectorAll('a[href*="swiggy.com"],a[href*="zomato"]').forEach(function(a){
-      a.addEventListener('click',function(){try{fbq('track','Lead');}catch(e){}});
+      a.addEventListener('click',function(){var p=/zomato/.test(a.href)?'zomato':'swiggy';try{fbq('track','Lead');}catch(e){}try{gtag('event','order_click',{platform:p,transport_type:'beacon'});}catch(e){}});
     });
   });
 })();
